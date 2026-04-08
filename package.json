@@ -1,0 +1,17 @@
+{
+  "name": "gh-app-devices",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "demo": "concurrently -k -n A-dash,B-broker,B-dash -c blue,magenta,cyan \"npm run demo -w pattern-a-direct\" \"npm start -w @gh-app-devices/broker\" \"npm run demo -w @gh-app-devices/device-client\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "workspaces": [
+    "shared",
+    "pattern-a-direct",
+    "pattern-b-broker/broker",
+    "pattern-b-broker/device-client"
+  ]
+}

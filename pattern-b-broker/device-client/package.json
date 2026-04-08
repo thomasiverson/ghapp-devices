@@ -1,0 +1,20 @@
+{
+  "name": "@gh-app-devices/device-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "demo": "node dist/dashboard.js"
+  },
+  "dependencies": {
+    "@azure/identity": "^4.4.0",
+    "@gh-app-devices/shared": "*",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}
