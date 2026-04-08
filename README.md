@@ -14,6 +14,8 @@ This repo implements two architecture patterns from the [Recommended Strategy fo
 
 The device holds the GitHub App private key and mints installation tokens directly. Simpler, but the private key is at risk if the device is compromised.
 
+![Pattern A Dashboard](./docs/images/pattern-a-dashboard.png)
+
 ### Pattern B — Token Broker (Recommended)
 
 ```
@@ -21,6 +23,8 @@ The device holds the GitHub App private key and mints installation tokens direct
 ```
 
 A trusted backend broker holds the private key. Devices authenticate to the broker (via API key or Entra ID certificate) and receive short-lived GitHub tokens. No GitHub secrets on devices.
+
+![Pattern B Dashboard](./docs/images/pattern-b-dashboard.png)
 
 ## Comparison
 

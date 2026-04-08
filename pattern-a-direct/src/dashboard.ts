@@ -345,7 +345,7 @@ fetch('/api/status').then(r => r.json()).then(d => {
 </body>
 </html>`;
 
-const PORT = Number(process.env.PORT) || 3000;
+const PORT = Number(process.env.PORT) || 3030;
 app.listen(PORT, () => {
   console.log(`\n🔐 Pattern A Dashboard: http://localhost:${PORT}\n`);
   console.log(`   Target: ${OWNER}/${REPO}`);
