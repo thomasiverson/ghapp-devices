@@ -9,7 +9,7 @@ This repo implements two architecture patterns from the [Recommended Strategy fo
 ### Pattern A — Direct On-Device Token Minting
 
 ```
-[ Field Device ]  →  sign JWT with private key  →  [ GitHub API ]
+[ Device ]  →  Sign JWT  →  [ GitHub API ]  →  Installation Token  →  Repo Operations
 ```
 
 The device holds the GitHub App private key and mints installation tokens directly. Simpler, but the private key is at risk if the device is compromised.
@@ -19,7 +19,7 @@ The device holds the GitHub App private key and mints installation tokens direct
 ### Pattern B — Token Broker (Recommended)
 
 ```
-[ Field Device ]  →  authenticate  →  [ Token Broker ]  →  mint token  →  [ GitHub API ]
+[ Device ]  →  Authenticate  →  [ Token Broker ]  →  Mint Token  →  [ GitHub API ]  →  Repo Operations
 ```
 
 A trusted backend broker holds the private key. Devices authenticate to the broker (via API key or Entra ID certificate) and receive short-lived GitHub tokens. No GitHub secrets on devices.
